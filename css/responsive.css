@@ -1,0 +1,143 @@
+
+@media (max-width:500px) {
+
+
+    /* ------------------
+    全体構造
+    ------------------ */
+    /* 横スクロールバーを消すため幅を初期値にした。 */
+    .content {
+        width: auto;
+    }
+    header .inner {
+        width: auto;
+    }
+    main {
+        width: auto;
+    }
+
+      /* ヘッダーのnavタグをスマホ表示のときだけ消した */
+    header .pc-nav{
+        display: none;
+    }
+
+    /* ハンバーガーメニュー */
+    .hamburger-button path {
+      fill: #fff;
+    }
+    .hamburger-button {
+      display: flex;
+      
+    }
+    /* メニューボタン */
+    .hamburger-button {
+      background-color: #0182BE;
+      width: 45px;
+      height: 45px;
+      border-radius: 5px;
+      top: 55px;
+    }
+    /* アイコン */
+    .hamburger-button svg {
+      width: 34.29px;
+      height: 30px;
+    }
+    
+    /* ナビゲーション */
+    .hamburger-nav {
+      height: 100%;
+    }
+    .hamburger-nav li{
+      width: 80%;
+      text-align: center;
+      background-color: #0182BE;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      
+    }
+    .hamburger-nav li a{
+      text-decoration: none;
+      color: #fff;
+    }
+
+
+
+
+    /* ------------------
+    メイン
+    ------------------ */
+
+    /* mainとasideにかかってるflexをやめさせるたにブロックレベル要素にした */
+    .content {
+        display: block;
+    }
+
+    /* メインの中身それぞれの下に60pxの余白ができました。 */
+    main{
+        margin-bottom: 60px;
+    }
+
+    /* mainのh2とpに画面の左右から10px余白ができるようにした */
+    #home main h2 {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      #home main p {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+
+
+      /* カードデザインを縦に変更した */
+      /* flexの3行捨ててblock要素にした */
+      main .card {
+        display: block;
+        text-align: center;
+        margin-bottom: 60px;
+      }
+      main .card img {
+        margin-bottom: 20px;
+        margin-right: 0;
+      }
+      main .card .desc {
+        width: auto;
+      }
+
+      /* トップページ以外のbodyタグにクラス名othersをつけたおいたのでそれを使います。トップページ以外のbody全体に左右10pxを空けました。 */
+      .others main{
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+
+
+      /* asaidを中央配置にした。いつもはmargin: 0 auto;にするけどtopは60pxがすでに入ってるから、今回はひとつずつ書いた。 */
+      aside {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 60px;
+      }
+
+
+
+
+
+      /* ------------------
+      フッター
+      ------------------ */
+
+      /* フッターをいじる前にhtmlファイルで <br> を使って改行させておく。 */
+      /* フッターのコピーライトをセンター揃えにする。 */
+      footer{
+          text-align: center;
+      }
+
+      /* フッターのコピーライトをスマホ表示のときだけ改行する。 */
+      footer small br{
+        display: inline;
+      }
+
+
+}
